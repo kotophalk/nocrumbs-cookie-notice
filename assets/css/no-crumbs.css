@@ -1,0 +1,82 @@
+/* Базовые стили для карточки No Crumbs */
+#nc-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99999;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    padding: 16px 20px;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    box-sizing: border-box;
+}
+
+#nc-cookie-banner * {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#nc-cookie-banner .nc-cookie-banner-content p {
+    margin: 0;
+}
+
+#nc-cookie-banner .nc-privacy-link {
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+#nc-cookie-banner .nc-privacy-link:hover {
+    color: #005177;
+    text-decoration: none;
+}
+
+#nc-cookie-banner .nc-cookie-banner-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nc-cookie-banner button#nc-cookie-accept {
+    background-color: #0073aa;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+#nc-cookie-banner button#nc-cookie-accept:hover {
+    background-color: #005177;
+}
+
+/* Класс для плавного скрытия/появления */
+#nc-cookie-banner.nc-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    #nc-cookie-banner {
+        /* Прижимаем аккуратно снизу, но оставляем отступы, избегая растяжения на 100% экрана */
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        max-width: none;
+    }
+}
