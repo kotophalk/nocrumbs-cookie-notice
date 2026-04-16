@@ -77,9 +77,9 @@ class No_Crumbs {
         // Вывод HTML-формы баннера со скрытым состоянием "nc-hidden"
         ?>
 <!-- No Crumbs Plugin -->
-<div id="nc-cookie-banner" class="nc-hidden nc-cookie-card" aria-hidden="true" role="dialog">
+<div id="nc-cookie-banner" class="nc-hidden nc-cookie-card" aria-hidden="true" role="dialog" aria-labelledby="nc-cookie-text">
     <div class="nc-cookie-banner-content">
-        <p><?php echo wp_kses_post( $notice_text ); ?></p>
+        <p id="nc-cookie-text"><?php echo wp_kses_post( $notice_text ); ?></p>
     </div>
     <div class="nc-cookie-banner-action">
         <button id="nc-cookie-accept" aria-label="<?php esc_attr_e( 'Принять и закрыть', 'no-crumbs' ); ?>">
