@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: No Crumbs
- * Plugin URI: https://github.com/kotophalk/no-crumbs
+ * Plugin URI: https://delosvod.ru/
  * Description: Минималистичный плагин из серии "установил и забыл" для уведомлений о cookie (152-ФЗ). Нуль влияния на скорость загрузки.
  * Version: 1.0.0
  * Requires at least: 5.0
- * Tested up to: 6.8
+ * Tested up to: 6.9
  * Requires PHP: 7.4
- * Author: Kotophalk
- * Author URI: https://github.com/kotophalk
+ * Author: Лаборатория Делосвод
+ * Author URI: https://stodum.ru/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: no-crumbs
@@ -28,20 +28,29 @@ define( 'NO_CRUMBS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 require_once NO_CRUMBS_PLUGIN_DIR . 'includes/class-no-crumbs.php';
 
 /**
- * Загрузка файлов локализации.
- */
-function no_crumbs_load_textdomain() {
-    load_plugin_textdomain( 'no-crumbs', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'init', 'no_crumbs_load_textdomain' );
-
-/**
  * Инициализация плагина.
  */
-function run_no_crumbs() {
+function no_crumbs_run() {
     $plugin = new No_Crumbs();
     $plugin->init();
 }
 
 // Запускаем при загрузке всех плагинов
-add_action( 'plugins_loaded', 'run_no_crumbs' );
+add_action( 'plugins_loaded', 'no_crumbs_run' );
+
+// Брендинговые ссылки на странице плагинов
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'no_crumbs_add_action_links' );
+
+/**
+ * Добавляет ссылки на экосистему в строку действий плагина.
+ *
+ * @param array $links Существующие ссылки действий.
+ * @return array Дополненный массив ссылок.
+ */
+function no_crumbs_add_action_links( $links ) {
+    $custom_links = array(
+        '<a href="https://stodum.ru/" target="_blank" style="color: #2271b1; font-weight: 500;">' . esc_html__( 'Техблог СТОДУМ', 'no-crumbs' ) . '</a>',
+        '<a href="https://delosvod.ru/" target="_blank">' . esc_html__( 'Больше инструментов', 'no-crumbs' ) . '</a>',
+    );
+    return array_merge( $links, $custom_links );
+}
