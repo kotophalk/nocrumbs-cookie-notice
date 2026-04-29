@@ -7,14 +7,14 @@
 ## Фаза 1: Базовая структура и безопасность (Backend)
 **Цель:** Создать каркас WordPress плагина, который безопасно инициализируется.
 - [x] **Шаг 1.1:** Создать корневую папку `/nocrumbs-cookie-notice/`.
-- [x] **Шаг 1.2:** Создать файл `no-crumbs.php`. Заполнить WordPress Plugin Header комментариями (Название, Версия, Описание).
-- [x] **Шаг 1.3:** Добавить защиту от прямого доступа в `no-crumbs.php` (`if ( ! defined( 'ABSPATH' ) ) exit;`).
+- [x] **Шаг 1.2:** Создать файл `nocrumbs-cookie-notice.php`. Заполнить WordPress Plugin Header комментариями (Название, Версия, Описание).
+- [x] **Шаг 1.3:** Добавить защиту от прямого доступа в `nocrumbs-cookie-notice.php` (`if ( ! defined( 'ABSPATH' ) ) exit;`).
 - [x] **Шаг 1.4:** Создать пустые файлы `index.php` во всех папках плагина для защиты директорий (directory index.php blocking).
 - [x] **Шаг 1.5:** Инициализировать подключение файла класса (через `require_once`) и запуск хука `plugins_loaded`.
 
 ## Фаза 2: Бизнес-логика (Backend - PHP OOP)
 **Цель:** Реализовать логику вывода в футер только для клиентской части.
-- [x] **Шаг 2.1:** Создать файл `includes/class-no-crumbs.php`. Объявить класс `No_Crumbs`.
+- [x] **Шаг 2.1:** Создать файл `includes/class-nocrumbs-cookie-notice.php`. Объявить класс `No_Crumbs`.
 - [x] **Шаг 2.2:** Внутри класса создать метод `init()`, регистрирующий хуки `wp_enqueue_scripts` и `wp_footer`.
 - [x] **Шаг 2.3:** Написать метод `enqueue_assets()`. Реализовать строгую проверку `if ( is_admin() ) { return; }`, после чего вызывать `wp_enqueue_style` и `wp_enqueue_script`.
 - [x] **Шаг 2.4:** Написать метод `render_notice()`. Сделать проверку `is_admin()`.

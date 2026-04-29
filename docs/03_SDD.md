@@ -15,9 +15,9 @@
 
 ```text
 nocrumbs-cookie-notice/
-├── no-crumbs.php                 // Точка входа: комментарий-заголовок, инициализация классов.
+├── nocrumbs-cookie-notice.php     // Точка входа: комментарий-заголовок, инициализация классов.
 ├── includes/
-│   └── class-no-crumbs.php       // Главный сервис-класс плагина: регистрация хуков.
+│   └── class-nocrumbs-cookie-notice.php  // Главный сервис-класс плагина: регистрация хуков.
 ├── assets/
 │   ├── css/
 │   │   └── nocrumbs-cookie-notice.css  // Минифицированный CSS-файл плашки.

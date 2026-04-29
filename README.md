@@ -37,8 +37,8 @@
 
 Код написан по стандартам WordPress с учетом всех правил изоляции директорий:
 
-- **`no-crumbs.php`** — Bootstrap-загрузчик с мета-заголовками.
-- **`includes/class-no-crumbs.php`** — Главный контроллер плагина (PHP сервисный класс). Обработка хуков `wp_enqueue_scripts` и `wp_footer`.
+- **`nocrumbs-cookie-notice.php`** — Bootstrap-загрузчик с мета-заголовками.
+- **`includes/class-nocrumbs-cookie-notice.php`** — Главный контроллер плагина (PHP сервисный класс). Обработка хуков `wp_enqueue_scripts` и `wp_footer`.
 - **`assets/js/nocrumbs-cookie-notice.js`** — Микро-скрипт Frontend. Валидатор наличия куки и добавление плавных CSS-состояний (`DOMContentLoaded`).
 - **`assets/css/nocrumbs-cookie-notice.css`** — Описание стилей с помощью CSS-transitions.
 - **`languages/nocrumbs-cookie-notice.pot`** — POT-матрица для локализации (к плагину можно легко добавлять языки через Loco Translate).

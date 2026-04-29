@@ -14,18 +14,18 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: includes/class-no-crumbs.php:68
+#: includes/class-nocrumbs-cookie-notice.php:68
 msgid "Политика конфиденциальности"
 msgstr ""
 
-#: includes/class-no-crumbs.php:74
+#: includes/class-nocrumbs-cookie-notice.php:74
 msgid "Мы используем файлы с данными (cookie) для работы сайта."
 msgstr ""
 
-#: includes/class-no-crumbs.php:75
+#: includes/class-nocrumbs-cookie-notice.php:75
 msgid "ОК"
 msgstr ""
 
-#: includes/class-no-crumbs.php:85
+#: includes/class-nocrumbs-cookie-notice.php:85
 msgid "Принять и закрыть"
 msgstr ""

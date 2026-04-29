@@ -25,7 +25,7 @@ define( 'NO_CRUMBS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'NO_CRUMBS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // Подключение главного класса плагина
-require_once NO_CRUMBS_PLUGIN_DIR . 'includes/class-no-crumbs.php';
+require_once NO_CRUMBS_PLUGIN_DIR . 'includes/class-nocrumbs-cookie-notice.php';
 
 /**
  * Инициализация плагина.
