@@ -1,14 +1,15 @@
 # Текущее состояние (State)
 
 ## Последнее обновление
-Разработка MVP успешно завершена (выполнена финальная Фаза 5). Плагин готов к релизу!
+Плагин переименован из «No Crumbs» в «NoCrumbs Cookie Notice» (v1.2.0). Slug и text domain обновлены на `nocrumbs-cookie-notice`.
 
-## Что сделано в финале:
-1. Выполнен аудит строк кода на использование WordPress i18n (`__`, `esc_html__`).
-2. Создан файл шаблона для переводов `languages/no-crumbs.pot` с указанием исходников строк ("Мы используем файлы с данными...", "ОК", "Политика конфиденциальности").
-3. Все директории защищены заглушками `index.php`.
-4. Плагин имеет абсолютно "нулевой" (Zero Bloat) вес для архитектуры сервера, а CSS/JS на клиенте занимают менее 5 Кб и не конфликтуют с кэшерами (WP Rocket и др.).
+## Что сделано в версии 1.2.0:
+1. Ребрендинг: Plugin Name → «NoCrumbs Cookie Notice», Text Domain → `nocrumbs-cookie-notice`.
+2. Переименованы файлы ассетов: `no-crumbs.css` → `nocrumbs-cookie-notice.css`, `no-crumbs.js` → `nocrumbs-cookie-notice.js`.
+3. Переименован POT-файл: `no-crumbs.pot` → `nocrumbs-cookie-notice.pot`.
+4. Обновлены хэндлы `wp_enqueue_style` / `wp_enqueue_script`.
+5. Обновлена вся документация (README, CHANGELOG, readme.txt, docs/).
 
 ## Итог разработки:
-Архитектура (SDD) соблюдена на 100%. User Stories (PRD) покрыты в полном объеме. 
-Можно упаковывать каталог `no-crumbs` в `.zip` и устанавливать на рабочий сайт!
+Архитектура (SDD) соблюдена на 100%. User Stories (PRD) покрыты в полном объеме.
+Можно упаковывать каталог `nocrumbs-cookie-notice` в `.zip` и устанавливать на рабочий сайт!

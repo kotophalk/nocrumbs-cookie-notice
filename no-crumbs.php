@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: No Crumbs
+ * Plugin Name: NoCrumbs Cookie Notice
  * Plugin URI: https://delosvod.ru/
  * Description: Минималистичный плагин из серии "установил и забыл" для уведомлений о cookie (152-ФЗ). Нуль влияния на скорость загрузки.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Requires at least: 5.0
  * Tested up to: 6.9
  * Requires PHP: 7.4
@@ -11,7 +11,7 @@
  * Author URI: https://stodum.ru/
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: no-crumbs
+ * Text Domain: nocrumbs-cookie-notice
  */
 
 // Защита от прямого доступа к файлу
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Константы плагина
-define( 'NO_CRUMBS_VERSION', '1.1.0' );
+define( 'NO_CRUMBS_VERSION', '1.2.0' );
 define( 'NO_CRUMBS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'NO_CRUMBS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
@@ -49,8 +49,8 @@ add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'no_crumbs_add
  */
 function no_crumbs_add_action_links( $links ) {
     $custom_links = array(
-        '<a href="https://stodum.ru/" target="_blank" style="color: #2271b1; font-weight: 500;">' . esc_html__( 'Техблог СТОДУМ', 'no-crumbs' ) . '</a>',
-        '<a href="https://delosvod.ru/" target="_blank">' . esc_html__( 'Больше инструментов', 'no-crumbs' ) . '</a>',
+        '<a href="https://stodum.ru/" target="_blank" style="color: #2271b1; font-weight: 500;">' . esc_html__( 'Техблог СТОДУМ', 'nocrumbs-cookie-notice' ) . '</a>',
+        '<a href="https://delosvod.ru/" target="_blank">' . esc_html__( 'Больше инструментов', 'nocrumbs-cookie-notice' ) . '</a>',
     );
     return array_merge( $links, $custom_links );
 }

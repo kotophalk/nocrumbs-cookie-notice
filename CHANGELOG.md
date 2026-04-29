@@ -3,6 +3,20 @@
 Все заметные изменения в проекте документируются в этом файле.
 Формат основан на [Keep a Changelog](https://keepachangelog.com/ru/1.0.0/).
 
+## [1.2.0] — 2026-04-29
+
+### Изменено
+- Ребрендинг плагина: «No Crumbs» → «NoCrumbs Cookie Notice».
+- Slug и Text Domain обновлены на `nocrumbs-cookie-notice`.
+- Переименованы файлы ассетов: `no-crumbs.css` → `nocrumbs-cookie-notice.css`, `no-crumbs.js` → `nocrumbs-cookie-notice.js`.
+- Переименован POT-файл: `no-crumbs.pot` → `nocrumbs-cookie-notice.pot`.
+- Обновлены хэндлы `wp_enqueue_style` / `wp_enqueue_script` для соответствия новому slug.
+
+## [1.1.0] — 2026-04-21
+
+### Добавлено
+- Брендинговые ссылки действий («Техблог СТОДУМ» и «Больше инструментов») в строке плагина на странице «Плагины».
+
 ## [1.0.0] — 2026-04-16
 
 ### Добавлено

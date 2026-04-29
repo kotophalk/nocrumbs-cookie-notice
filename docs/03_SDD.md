@@ -1,5 +1,5 @@
 # System Design Document (SDD)
-**Проект:** No Crumbs (Минималистичный плагин уведомлений о cookie)
+**Проект:** NoCrumbs Cookie Notice (Минималистичный плагин уведомлений о cookie)
 **Версия:** MVP
 
 ## 1. Архитектурный подход и Стек технологий
@@ -14,17 +14,17 @@
 Проект будет структурироваться по стандарту (согласно гайдлайнам WP Plugin Development, с единой точкой входа):
 
 ```text
-no-crumbs/
+nocrumbs-cookie-notice/
 ├── no-crumbs.php                 // Точка входа: комментарий-заголовок, инициализация классов.
 ├── includes/
 │   └── class-no-crumbs.php       // Главный сервис-класс плагина: регистрация хуков.
 ├── assets/
 │   ├── css/
-│   │   └── no-crumbs.css         // Минифицированный CSS-файл плашки.
+│   │   └── nocrumbs-cookie-notice.css  // Минифицированный CSS-файл плашки.
 │   └── js/
-│       └── no-crumbs.js          // Логика клиентской стороны по проверке и записи cookie.
+│       └── nocrumbs-cookie-notice.js   // Логика клиентской стороны по проверке и записи cookie.
 └── languages/
-    └── no-crumbs.pot             // Файл базовых переводов (i18n).
+    └── nocrumbs-cookie-notice.pot      // Файл базовых переводов (i18n).
 ```
 
 ## 3. Общая логика (System Flow)
@@ -32,7 +32,7 @@ no-crumbs/
 ### Шаг 1: Инициализация (Backend)
 1.  Событие `plugins_loaded`: подключается локализация `load_plugin_textdomain`.
 2.  Событие `init`: загружается текстовый домен для переводов.
-2.  Событие `wp_enqueue_scripts`: регистрируются и подключаются `no-crumbs.css` и `no-crumbs.js`.
+2.  Событие `wp_enqueue_scripts`: регистрируются и подключаются `nocrumbs-cookie-notice.css` и `nocrumbs-cookie-notice.js`.
     *   *Условие:* Подключение происходит **только если** `! is_admin()` (защита от исполнения в панели управления).
 3.  Событие `wp_footer`: выполняется рендер HTML-каркаса плашки.
 
@@ -40,7 +40,7 @@ no-crumbs/
 1.  Сервер запрашивает ссылку на политику конфиденциальности с помощью ядра: `get_permalink( get_option('wp_page_for_privacy_policy') )`.
 2.  Строится HTML-строка:
     *   Изолированный контейнер `<div id="nc-cookie-banner" class="nc-hidden" aria-hidden="true">`
-    *   Текст: `esc_html__('Мы используем файлы с данными (cookie) для работы сайта.', 'no-crumbs')`
+    *   Текст: `esc_html__('Мы используем файлы с данными (cookie) для работы сайта.', 'nocrumbs-cookie-notice')`
     *   Ссылка "Политика конфиденциальности" (или пусто, если страница не настроена в WP).
     *   Кнопка `<button id="nc-cookie-accept">ОК</button>`.
 3.  Разметка выводится строго перед закрывающим тегом `</body>`. Изначально плашке через CSS задан класс `.nc-hidden` для скрытия (чтобы не было моргания интерфейса до выполнения логики JS).

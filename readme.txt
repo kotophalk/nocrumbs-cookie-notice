@@ -1,9 +1,9 @@
-=== No Crumbs ===
+=== NoCrumbs Cookie Notice ===
 Contributors: kotophalk
 Tags: cookie, notice, 152-fz, privacy, compliance
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -12,7 +12,7 @@ A lightweight, zero-bloat cookie consent notice plugin for WordPress. Compliant 
 
 == Description ==
 
-**No Crumbs** is an ultra-lightweight WordPress plugin built on the "install and forget" principle. It provides a cookie consent notice compliant with Russian Federal Law 152-FZ without adding any bloat to your site.
+**NoCrumbs Cookie Notice** is an ultra-lightweight WordPress plugin built on the "install and forget" principle. It provides a cookie consent notice compliant with Russian Federal Law 152-FZ without adding any bloat to your site.
 
 = Key Features =
 
@@ -31,7 +31,7 @@ A lightweight, zero-bloat cookie consent notice plugin for WordPress. Compliant 
 
 == Installation ==
 
-1. Upload the `no-crumbs` folder to the `/wp-content/plugins/` directory.
+1. Upload the `nocrumbs-cookie-notice` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
 3. Make sure you have a Privacy Policy page selected under `Settings → Privacy`. The plugin will automatically pick up the link.
 
@@ -61,6 +61,11 @@ In the current version (MVP), the text and design are fixed. Customization optio
 
 == Changelog ==
 
+= 1.2.0 =
+* Rebranded plugin: "No Crumbs" → "NoCrumbs Cookie Notice".
+* Updated slug and text domain to `nocrumbs-cookie-notice`.
+* Renamed all asset files and handles to match the new slug.
+
 = 1.1.0 =
 * Added branding action links ("Техблог СТОДУМ" and "Больше инструментов") to the plugin row on the Plugins page.
 
@@ -74,6 +79,9 @@ In the current version (MVP), the text and design are fixed. Customization optio
 * Internationalization (i18n) with POT file.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Plugin rebranded to "NoCrumbs Cookie Notice". Updated slug, text domain, and asset file names.
 
 = 1.1.0 =
 Adds quick-access links to the Stodm ecosystem in the plugin row on the Plugins page.

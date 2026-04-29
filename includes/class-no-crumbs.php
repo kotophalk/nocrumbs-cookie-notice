@@ -29,8 +29,8 @@ class No_Crumbs {
 
         // Подключаем стили
         wp_enqueue_style(
-            'no-crumbs-style',
-            NO_CRUMBS_PLUGIN_URL . 'assets/css/no-crumbs.css',
+            'nocrumbs-cookie-notice-style',
+            NO_CRUMBS_PLUGIN_URL . 'assets/css/nocrumbs-cookie-notice.css',
             array(),
             NO_CRUMBS_VERSION,
             'all'
@@ -38,8 +38,8 @@ class No_Crumbs {
 
         // Подключаем скрипты в футер (true)
         wp_enqueue_script(
-            'no-crumbs-script',
-            NO_CRUMBS_PLUGIN_URL . 'assets/js/no-crumbs.js',
+            'nocrumbs-cookie-notice-script',
+            NO_CRUMBS_PLUGIN_URL . 'assets/js/nocrumbs-cookie-notice.js',
             array(),
             NO_CRUMBS_VERSION,
             true 
@@ -65,14 +65,14 @@ class No_Crumbs {
                 $privacy_link = sprintf(
                     ' <a href="%s" class="nc-privacy-link">%s</a>',
                     esc_url( $privacy_url ),
-                    esc_html__( 'Политика конфиденциальности', 'no-crumbs' )
+                    esc_html__( 'Политика конфиденциальности', 'nocrumbs-cookie-notice' )
                 );
             }
         }
 
         // Создаем готовые строки
-        $notice_text = esc_html__( 'Мы используем файлы с данными (cookie) для работы сайта.', 'no-crumbs' ) . $privacy_link;
-        $button_text = esc_html__( 'ОК', 'no-crumbs' );
+        $notice_text = esc_html__( 'Мы используем файлы с данными (cookie) для работы сайта.', 'nocrumbs-cookie-notice' ) . $privacy_link;
+        $button_text = esc_html__( 'ОК', 'nocrumbs-cookie-notice' );
 
         // Вывод HTML-формы баннера со скрытым состоянием "nc-hidden"
         ?>
@@ -82,7 +82,7 @@ class No_Crumbs {
         <p id="nc-cookie-text"><?php echo wp_kses_post( $notice_text ); ?></p>
     </div>
     <div class="nc-cookie-banner-action">
-        <button id="nc-cookie-accept" aria-label="<?php esc_attr_e( 'Принять и закрыть', 'no-crumbs' ); ?>">
+        <button id="nc-cookie-accept" aria-label="<?php esc_attr_e( 'Принять и закрыть', 'nocrumbs-cookie-notice' ); ?>">
             <?php echo esc_html( $button_text ); ?>
         </button>
     </div>
