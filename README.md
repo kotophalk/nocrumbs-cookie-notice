@@ -1,4 +1,4 @@
-# 🍪 NoCrumbs Cookie Notice — Минималистичный плагин уведомлений о Cookie (152-ФЗ)
+# 🍪 NoCrumbs Cookie Notice — минималистичный плагин уведомлений о cookie (152-ФЗ)
 
 ![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![License](https://img.shields.io/badge/license-GPLv2-green)
