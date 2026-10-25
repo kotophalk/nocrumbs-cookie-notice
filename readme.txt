@@ -16,7 +16,7 @@ A lightweight, zero-bloat cookie consent notice plugin for WordPress. Compliant 
 
 = Key Features =
 
-* 🪶 **Zero Bloat.** The frontend runs on pure Vanilla JS and CSS3. Total asset weight is under 5 KB. No jQuery, no external fonts.
+* 🪶 **Zero Bloat.** The frontend runs on pure Vanilla JS and CSS3. Total asset weight is about 5 KB (about 2 KB gzipped). No jQuery, no external fonts.
 * ⚡ **Cache-Compatible.** Cookie checks are performed entirely on the client side, so the plugin works seamlessly with WP Rocket, LiteSpeed, Cloudflare, and any CDN.
 * 🎨 **Sleek Minimalism.** A clean card-style notification in the bottom-left corner with smooth animations. Fully responsive on mobile devices.
 * 🛡️ **Secure.** The code uses native WordPress escaping functions. Scripts and styles are not loaded in the admin panel.
@@ -45,7 +45,7 @@ No. The plugin works immediately after activation. The only recommendation is to
 
 = Will the plugin affect my site's loading speed? =
 
-No. The combined size of JS and CSS is under 5 KB. The plugin does not use jQuery and does not load any external fonts or libraries.
+No. The combined size of JS and CSS is about 5 KB uncompressed and about 2 KB gzipped. The plugin does not use jQuery and does not load any external fonts or libraries.
 
 = Is the plugin compatible with WP Rocket / LiteSpeed / Cloudflare? =
 
@@ -85,7 +85,7 @@ In the current version (MVP), the text and design are fixed. Customization optio
 * Initial release.
 * Cookie consent banner in card style.
 * Russian Federal Law 152-FZ compliance out of the box.
-* Zero Bloat: Vanilla JS + CSS3, under 5 KB total.
+* Zero Bloat: Vanilla JS + CSS3, about 5 KB total.
 * Full cache compatibility (WP Rocket, LiteSpeed, Cloudflare).
 * Automatic link to the Privacy Policy page from WordPress settings.
 * Internationalization (i18n) with POT file.
